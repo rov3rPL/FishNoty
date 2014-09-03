@@ -1,0 +1,17 @@
+C:\Users\mw\Downloads\Learning_Toast_Notifications\WPFGrowlNotification-master\FishNoty\bin\Debug\FishNoty.exe.config
+C:\Users\mw\Downloads\Learning_Toast_Notifications\WPFGrowlNotification-master\FishNoty\bin\Debug\FishNoty.exe
+C:\Users\mw\Downloads\Learning_Toast_Notifications\WPFGrowlNotification-master\FishNoty\bin\Debug\FishNoty.pdb
+C:\Users\mw\Downloads\Learning_Toast_Notifications\WPFGrowlNotification-master\FishNoty\obj\Debug\FishNoty.csprojResolveAssemblyReference.cache
+C:\Users\mw\Downloads\Learning_Toast_Notifications\WPFGrowlNotification-master\FishNoty\obj\Debug\MainWindow.baml
+C:\Users\mw\Downloads\Learning_Toast_Notifications\WPFGrowlNotification-master\FishNoty\obj\Debug\MainWindow.g.cs
+C:\Users\mw\Downloads\Learning_Toast_Notifications\WPFGrowlNotification-master\FishNoty\obj\Debug\App.g.cs
+C:\Users\mw\Downloads\Learning_Toast_Notifications\WPFGrowlNotification-master\FishNoty\obj\Debug\FishNoty_MarkupCompile.cache
+C:\Users\mw\Downloads\Learning_Toast_Notifications\WPFGrowlNotification-master\FishNoty\obj\Debug\FishNoty.g.resources
+C:\Users\mw\Downloads\Learning_Toast_Notifications\WPFGrowlNotification-master\FishNoty\obj\Debug\FishNoty.Properties.Resources.resources
+C:\Users\mw\Downloads\Learning_Toast_Notifications\WPFGrowlNotification-master\FishNoty\obj\Debug\FishNoty.csproj.GenerateResource.Cache
+C:\Users\mw\Downloads\Learning_Toast_Notifications\WPFGrowlNotification-master\FishNoty\obj\Debug\FishNoty.exe
+C:\Users\mw\Downloads\Learning_Toast_Notifications\WPFGrowlNotification-master\FishNoty\obj\Debug\FishNoty.pdb
+C:\Users\mw\Downloads\Learning_Toast_Notifications\WPFGrowlNotification-master\FishNoty\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mw\Downloads\Learning_Toast_Notifications\WPFGrowlNotification-master\FishNoty\bin\Debug\RestSharp.dll
+C:\Users\mw\Downloads\Learning_Toast_Notifications\WPFGrowlNotification-master\FishNoty\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mw\Downloads\Learning_Toast_Notifications\WPFGrowlNotification-master\FishNoty\bin\Debug\RestSharp.xml
