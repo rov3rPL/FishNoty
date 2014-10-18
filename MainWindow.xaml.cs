@@ -17,7 +17,9 @@ using System.Net;
 using System.Web;
 using RestSharp;
 using Newtonsoft.Json;
-
+using System.Diagnostics;
+using FishNoty.Core;
+using FishNotificationSources;
 
 namespace FishNoty
 {
@@ -27,7 +29,10 @@ namespace FishNoty
     public partial class MainWindow : Window
     {
         private string _baseUrl = "https://api.quizlet.com/";
-        private string redirectedUrl = "www.snipclip.pl";
+        private string clientID = "JupbbrWR6n";
+        private string secretKey = "9nhMc2uwMRT59uJZPrFEZF";
+        private string redirectedUrl = "localhost";
+        public string AuthorizationCode { get; set; }
         public string Token { get; set; }
         
 
@@ -35,7 +40,15 @@ namespace FishNoty
         {
             InitializeComponent();
 
-            webBrowser.Source = new Uri("https://quizlet.com/authorize?response_type=code&client_id=JupbbrWR6n&scope=read&state=RANDOM_STRING");
+            Process.Start("https://quizlet.com/authorize?response_type=code&client_id=JupbbrWR6n&scope=read&state=5bukj76nkbjnbac&approval_prompt=force&access_type=offline");
+            //Token = "QKEaahvNjQRGhqquBfewJ9GhXYVZTJDectKG6R6Z";
+            //NotificationSources sources = new NotificationSources();
+            //Set set = sources.GetSet(19553107);
+
+            webBrowser.Source = new Uri("https://quizlet.com/authorize?response_type=code&client_id=JupbbrWR6n&scope=read&state=5bukj76nkbjnbac");
+
+            //Token = "yaecHbnuzb3ppG4u3SJpDXpcXVt2HWvPRX5eRKEQ";
+            //tests();
 
             webBrowser.Navigating += webBrowser_Navigating;
         }
@@ -45,21 +58,13 @@ namespace FishNoty
             if (String.Equals(e.Uri.Host, redirectedUrl))
             {
                 NameValueCollection prms = HttpUtility.ParseQueryString(e.Uri.Query);
-                Token = prms["code"];
-
-                var client = new RestClient(_baseUrl);                
-                //if (!String.IsNullOrEmpty(_userName))
-                //{
-                    //client.Authenticator = new HttpBasicAuthenticator(_userName, _password);
-                //}
-
-                var request = new RestRequest("/2.0/search/sets?q=turkish");
-                request.AddHeader("Authorization", "Bearer " + Token);
-                var response = client.Execute(request);
-                var keyResponse = JsonConvert.DeserializeObject<dynamic>(response.Content);
-                //response.Data;
+                AuthorizationCode = prms["code"];
 
             }
         }
+
+        
     }
+    
+
 }
