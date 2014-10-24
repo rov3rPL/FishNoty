@@ -8,6 +8,6 @@
     <StackPanel>
         <Button Content="Growl notification from quizlet test" HorizontalAlignment="Left" Margin="51,88,0,0" VerticalAlignment="Top" Width="231" Click="Button_Click"/>
         <Button Content="Search test" HorizontalAlignment="Left" Margin="51,24,0,0" VerticalAlignment="Top" Width="192" Click="Button_Click_1"/>
-        <Button Content="Local repository" HorizontalAlignment="Left" Margin="51,24,0,0" VerticalAlignment="Top" Width="192" Click="Button_Click_1"/>
+        <Button Content="Local repository" HorizontalAlignment="Left" Margin="51,24,0,0" VerticalAlignment="Top" Width="192" Click="Button_Click_2"/>
     </StackPanel>
 </Window>

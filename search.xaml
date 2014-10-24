@@ -1,8 +1,10 @@
-﻿<Window
+﻿<UserControl x:Class="FishNoty.search"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" x:Class="FishNoty.search"
-        Title="search" Height="400" Width="600">
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        mc:Ignorable="d" 
+        d:DesignHeight="480" d:DesignWidth="640">
     <StackPanel Background="#FF321E76">
         <StackPanel Orientation="Vertical" Height="63">
             <TextBox Name="searchTextBox" Height="23" Width="360" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Search Quizlet..." VerticalAlignment="Top" Background="#FFF5F582"/>
@@ -14,7 +16,7 @@
             	Content="Search" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"
                 Click="searchBtn_Click"
                 />
-        </StackPanel>            
-        <DataGrid Name="resultsGrid" Margin="0,62,0,0" Height="220" Width="590" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+        </StackPanel>
+        <DataGrid Name="resultsGrid" Height="399" Width="590" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="25,0"/>
     </StackPanel>
-</Window>
+</UserControl>

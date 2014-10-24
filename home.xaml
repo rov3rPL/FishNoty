@@ -1,8 +1,21 @@
-﻿<Window x:Class="FishNoty.home"
+﻿<UserControl x:Class="FishNoty.home"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="home" Height="300" Width="300">
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        d:DesignHeight="480" d:DesignWidth="640">
     <Grid>
-        
+        <DataGrid Name="setsGrid" Background="#FFFFF639">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="ChangeText">Show/Hide</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
-</Window>
+</UserControl>

@@ -1,0 +1,23 @@
+﻿<Window x:Class="FishNoty.main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="main" Height="480" Width="720"
+        Closing="Window_Closing"
+        StateChanged="Window_StateChanged"
+        IsVisibleChanged="Window_IsVisibleChanged"
+        >
+    <Grid>
+        <StackPanel>
+            <Menu VerticalAlignment="Top" Background="White" >
+                <MenuItem Header="Home" Click="MenuItem_Click" FontSize="22" Background="#FF2A94FF"></MenuItem>
+                <MenuItem Header="Search" Click="MenuItem_Click" FontSize="22" Background="#FFFFF750"></MenuItem>
+                <MenuItem Header="Statistics" Click="MenuItem_Click" FontSize="22" Background="#FF6AF528"></MenuItem>
+                <MenuItem Header="Config" Click="MenuItem_Click" FontSize="22" Background="#FFEAAB25"></MenuItem>            
+            </Menu>
+        
+            <ContentControl Name="contentControl">
+            
+            </ContentControl>
+        </StackPanel>
+    </Grid>
+</Window>

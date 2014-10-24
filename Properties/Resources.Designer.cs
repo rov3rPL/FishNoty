@@ -176,6 +176,35 @@ namespace FishNoty.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} terms.
+        /// </summary>
+        internal static string NTerms {
+            get {
+                return ResourceManager.GetString("NTerms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap quizlet {
+            get {
+                object obj = ResourceManager.GetObject("quizlet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap quizlet_rounded {
+            get {
+                object obj = ResourceManager.GetObject("quizlet_rounded", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Radiation_warning_symbol {

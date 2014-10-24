@@ -21,7 +21,7 @@ namespace FishNoty
     /// <summary>
     /// Interaction logic for search.xaml
     /// </summary>
-    public partial class search : Window
+    public partial class search : UserControl
     {
         long? selectedSet;
         readonly QuizletImporter importer;

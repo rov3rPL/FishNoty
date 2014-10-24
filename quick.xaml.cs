@@ -46,7 +46,7 @@ namespace FishNoty
             m_notifyIcon.BalloonTipText = "The app has been minimised. Click the tray icon to show.";
             m_notifyIcon.BalloonTipTitle = "The App";
             m_notifyIcon.Text = "The App";
-            m_notifyIcon.Icon = new System.Drawing.Icon("TheAppIcon.ico");
+            m_notifyIcon.Icon = new System.Drawing.Icon("fish2.ico");
             m_notifyIcon.Click += new EventHandler(m_notifyIcon_Click);
 
 
@@ -159,15 +159,15 @@ namespace FishNoty
         // show search window
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            search searchWnd = new search();
-            searchWnd.Show();
+            //search searchWnd = new search();
+            //searchWnd.Show();
         }
 
         // show home window
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            home homeWnd = new home();
-            homeWnd.Show();
+            //home homeWnd = new home();
+            //homeWnd.Show();
         }
 
     }

@@ -153,9 +153,14 @@
   </data>
   <data name="NEntries" xml:space="preserve">
     <value>{0} entries</value>
+    <comment>Used to show how many entries a dictionary contains</comment>
   </data>
   <data name="NLists" xml:space="preserve">
     <value>{0} lists</value>
+  </data>
+  <data name="NTerms" xml:space="preserve">
+    <value>{0} terms</value>
+    <comment>Used to denote how many items a word list contains.</comment>
   </data>
   <data name="RecentDictionaries" xml:space="preserve">
     <value>Recent Dictionaries</value>
@@ -165,5 +170,11 @@
   </data>
   <data name="Tags" xml:space="preserve">
     <value>Tags</value>
+  </data>
+  <data name="quizlet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quizlet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="quizlet_rounded" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quizlet_rounded.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

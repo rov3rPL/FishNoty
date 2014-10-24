@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>fish2.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -71,9 +74,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="config.xaml.cs">
+      <DependentUpon>config.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GrowlNotifiactions.xaml.cs">
       <SubType>Code</SubType>
       <DependentUpon>GrowlNotifiactions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="home.xaml.cs">
+      <DependentUpon>home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="main.xaml.cs">
+      <DependentUpon>main.xaml</DependentUpon>
     </Compile>
     <Compile Include="Notification.cs" />
     <Compile Include="quick.xaml.cs">
@@ -82,11 +94,27 @@
     <Compile Include="search.xaml.cs">
       <DependentUpon>search.xaml</DependentUpon>
     </Compile>
+    <Compile Include="StaticController.cs" />
+    <Compile Include="statistics.xaml.cs">
+      <DependentUpon>statistics.xaml</DependentUpon>
+    </Compile>
+    <Page Include="config.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DesignTimeNotificationData.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="GrowlNotifiactions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="main.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -111,6 +139,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="search.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="statistics.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -168,6 +200,15 @@
     <Resource Include="Resources\microsoft-windows-8-logo.png" />
     <Resource Include="Resources\notification-icon.png" />
     <Resource Include="Resources\Radiation_warning_symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fish2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\quizlet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quizlet_rounded.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
