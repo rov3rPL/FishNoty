@@ -51,8 +51,15 @@ namespace FishNoty
                 case "Config":
                     contentControl.Content = new config();
                     break;
+                case "homeView":
+                    contentControl.Content = new homeView();
+                    break;
+                case "searchView":
+                    contentControl.Content = new searchView();
+                    break;
             }
-            
+
+            this.Title = "FishNoty - " + item.Header.ToString();
         }
 
         #region Window actions

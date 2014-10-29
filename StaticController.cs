@@ -70,12 +70,12 @@ namespace FishNoty
             }
 
             WordListEntry entry = wordList[i % wordList.Count];
+            string defaultImageUri = "pack://application:,,,/Resources/quizlet.png";
             growlNotifications.AddNotification(new Notification
             {
                 Title = entry.Phrase
                 ,
-                //ImageUrl = "pack://application:,,,/Resources/notification-icon.png"
-                ImageUrl = "pack://application:,,,/Resources/quizlet.png"
+                ImageUrl = String.IsNullOrEmpty(entry.ImageUri)? defaultImageUri : entry.ImageUri
                 ,
                 Message = entry.Translation
             });

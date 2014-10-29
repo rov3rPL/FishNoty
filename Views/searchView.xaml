@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="FishNoty.searchView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        mc:Ignorable="d" 
+        d:DesignHeight="480" d:DesignWidth="640">
+    <StackPanel Background="#FF321E76">
+        <StackPanel Orientation="Vertical" Height="63">
+            <TextBox Name="searchTextBox" Height="23" Width="360" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Search Quizlet..." VerticalAlignment="Top" Background="#FFF5F582"/>
+            <Button Name="searchBtn"
+            	Height="23"
+            	Width="75"                
+            	HorizontalAlignment="Right"
+            	Margin="0,0,15,0"
+            	Content="Search" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"
+                Click="searchBtn_Click"
+                />
+        </StackPanel>
+        <xctk:BusyIndicator IsBusy="{Binding IsLoading}">
+            <DataGrid Name="resultsGrid" ItemsSource="{Binding SearchResultsView}"
+                      CanUserAddRows="False" CanUserDeleteRows="False"
+                      AutoGenerateColumns="True"
+                      Height="399" Width="590" 
+                      HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="25,0">
+                <DataGrid.ItemContainerStyle>
+                    <Style TargetType="DataGridRow">
+                        <EventSetter Event="MouseDoubleClick" Handler="Button_Click" />
+                    </Style>
+                </DataGrid.ItemContainerStyle>
+                
+            </DataGrid>
+        </xctk:BusyIndicator>
+    </StackPanel>
+</UserControl>

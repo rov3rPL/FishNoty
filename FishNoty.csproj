@@ -68,15 +68,36 @@
     <Reference Include="PresentationFramework">
       <Private>True</Private>
     </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.3\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Common\FastObservableCollection.cs" />
+    <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="config.xaml.cs">
       <DependentUpon>config.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Exceptions\NotInitializedException.cs" />
     <Compile Include="GrowlNotifiactions.xaml.cs">
       <SubType>Code</SubType>
       <DependentUpon>GrowlNotifiactions.xaml</DependentUpon>
@@ -97,6 +118,15 @@
     <Compile Include="StaticController.cs" />
     <Compile Include="statistics.xaml.cs">
       <DependentUpon>statistics.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\homeViewModel.cs" />
+    <Compile Include="ViewModels\searchViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\homeView.xaml.cs">
+      <DependentUpon>homeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\searchView.xaml.cs">
+      <SubType>Code</SubType>
     </Compile>
     <Page Include="config.xaml">
       <SubType>Designer</SubType>
@@ -143,6 +173,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="statistics.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\homeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\searchView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

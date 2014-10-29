@@ -12,7 +12,9 @@
                 <MenuItem Header="Home" Click="MenuItem_Click" FontSize="22" Background="#FF2A94FF"></MenuItem>
                 <MenuItem Header="Search" Click="MenuItem_Click" FontSize="22" Background="#FFFFF750"></MenuItem>
                 <MenuItem Header="Statistics" Click="MenuItem_Click" FontSize="22" Background="#FF6AF528"></MenuItem>
-                <MenuItem Header="Config" Click="MenuItem_Click" FontSize="22" Background="#FFEAAB25"></MenuItem>            
+                <MenuItem Header="Config" Click="MenuItem_Click" FontSize="22" Background="#FFEAAB25"></MenuItem>
+                <MenuItem Header="homeView" Click="MenuItem_Click" FontSize="22" Background="#FF2A94FF"></MenuItem>
+                <MenuItem Header="searchView" Click="MenuItem_Click" FontSize="22" Background="#FFFFF750"></MenuItem>
             </Menu>
         
             <ContentControl Name="contentControl">
