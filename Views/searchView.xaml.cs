@@ -17,7 +17,7 @@ using Szotar;
 using Szotar.Quizlet;
 using Szotar.WindowsForms;
 
-namespace FishNoty
+namespace FishNoty.Views
 {
     /// <summary>
     /// Interaction logic for searchView.xaml

@@ -17,7 +17,7 @@ using System.Windows.Shapes;
 using Szotar;
 using Szotar.Sqlite;
 
-namespace FishNoty
+namespace FishNoty.Views
 {
     //public class SetPresentation
     //{

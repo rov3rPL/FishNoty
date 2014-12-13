@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\mw\Downloads\Learning_Toast_Notifications\WPFGrowlNotification-master\FishNoty\obj\Debug\
+C:\Users\mw\Documents\GitHub\FishNoty\FishNoty\obj\Debug\
 FishNoty
 none
 false
-DEBUG;TRACE
-C:\Users\mw\Downloads\Learning_Toast_Notifications\WPFGrowlNotification-master\FishNoty\App.xaml
-11151548125
-
-9-754754306
-17-1972379238
-MainWindow.xaml;
+TRACE;DEBUG;WINDOWS
+C:\Users\mw\Documents\GitHub\FishNoty\FishNoty\App.xaml
+161268902304
+2749318642
+33131221197
+391352102524
+config.xaml;DesignTimeNotificationData.xaml;GrowlNotifiactions.xaml;home.xaml;main.xaml;MainWindowStyled.xaml;Resources\ButtonStyle.xaml;MainWindow.xaml;quick.xaml;Resources\DataGridStyle.xaml;Resources\ScrollViewerStyle.xaml;search.xaml;statistics.xaml;Views\configView.xaml;Views\homeView.xaml;Views\searchView.xaml;
 
 False
 

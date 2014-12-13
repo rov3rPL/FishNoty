@@ -38,7 +38,7 @@ namespace FishNoty
             if (notificationsTimer == null)
             {
                 notificationsTimer = new System.Timers.Timer();
-                notificationsTimer.Interval = 1200; //1000*60;
+                notificationsTimer.Interval = 6000; //1000*60;
                 notificationsTimer.AutoReset = false;
                 notificationsTimer.Elapsed += notificationsTimer_Elapsed;
                 notificationsTimer.Start();

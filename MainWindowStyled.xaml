@@ -1,0 +1,143 @@
+﻿<Window x:Class="FishNoty.MainWindowStyled"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow"
+        xmlns:pan="clr-namespace:PanoramaControl;assembly=PanoramaControl"
+        xmlns:vms="clr-namespace:FishNoty.ViewModels"
+        xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+        ResizeMode="NoResize"
+        Width="1000"
+        MinWidth="1000"
+        MaxWidth="1000"
+        Height="640"
+        MinHeight="640"
+        MaxHeight="640"
+        Background="White"
+        Style="{StaticResource SimpleWindowStyle}"
+        WindowStyle="None">
+
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type vms:PanoramaItemViewModel}">
+            <Button Command="{Binding TileClickedCommand}">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Border x:Name="bord"
+                                BorderThickness="0"
+                                Background="{Binding RelativeSource={RelativeSource 
+                                    AncestorType={x:Type pan:Panorama}, 
+                                    Mode=FindAncestor}, 
+                                    Path=TileColorPair[0]}"
+                                Opacity="1.0"
+                                Width="180"
+                                Height="180"
+                                Margin="10">
+                            <Image x:Name="img"
+                                   Source="{Binding ImageUrl}"
+                                   Width="180"
+                                   Height="180"
+                                   Margin="0"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   StretchDirection="Both"
+                                   Stretch="UniformToFill">
+                            </Image>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </DataTemplate>
+    </Window.Resources>
+
+
+
+    <Border BorderBrush="Black"
+            BorderThickness="2" Background="#FF009BF3">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="500" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0"
+                  Height="100"
+                  Background="#FF009BF3"
+                  MouseDown="Grid_MouseDown">
+                <Label Content="FishNoty"
+                       FontFamily="Segoe UI"
+                       Foreground="White"
+                       FontSize="30"
+                       Margin="10,0,0,0"
+                       HorizontalContentAlignment="Left"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       VerticalContentAlignment="Center" />
+                <Button Click="Close_Click"
+                        Style="{StaticResource xButtonStyle}" />
+                
+            </Grid>
+
+            <StackPanel Grid.Row="1"
+                        MinWidth="1000"
+                          MaxWidth="1000"
+                          Height="500"
+                          MinHeight="500"
+                          MaxHeight="500"                          
+                          Background="White"
+                        >
+                <Menu VerticalAlignment="Top" Background="White" >
+                    <MenuItem Header="Home" Visibility="Collapsed" Click="MenuItem_Click" FontSize="22" Background="#FF2A94FF"></MenuItem>
+                    <MenuItem Header="Search" Visibility="Collapsed" Click="MenuItem_Click" FontSize="22" Background="#FFFFF750"></MenuItem>
+                    <MenuItem Header="Statistics" Click="MenuItem_Click" FontSize="22" Background="#FF6AF528"></MenuItem>
+                    <MenuItem Header="Config" Click="MenuItem_Click" FontSize="22" Background="#FFEAAB25"></MenuItem>
+                    <MenuItem Header="homeView" Click="MenuItem_Click" FontSize="22" Background="#FF2A94FF"></MenuItem>
+                    <MenuItem Header="searchView" Click="MenuItem_Click" FontSize="22" Background="#FFFFF750"></MenuItem>
+                </Menu>
+
+                <ContentControl Name="contentControl">
+
+                </ContentControl>
+            </StackPanel>
+
+            <!--<pan:Panorama Grid.Row="1"
+                          x:Name="pan"
+                          UseSnapBackScrolling="True"
+                          ItemsSource="{Binding PanoramaItems}"
+                          ItemBox="190"
+                          GroupHeight="360"
+                          MinWidth="1000"
+                          MaxWidth="1000"
+                          Height="500"
+                          MinHeight="500"
+                          MaxHeight="500"
+                          HeaderFontColor="Black"
+                          Background="White" />-->
+
+            <!--<ed:RegularPolygon Grid.Row="1"
+                               Fill="Black"
+                               HorizontalAlignment="Left"
+                               Height="20"
+                               InnerRadius="1"
+                               Margin="30,0,0,0"
+                               PointCount="3"
+                               Stretch="Fill"
+                               Stroke="Black"
+                               VerticalAlignment="Top"
+                               Width="30"
+                               RenderTransformOrigin="0.5,0.5">
+                <ed:RegularPolygon.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1" />
+                        <SkewTransform />
+                        <RotateTransform />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </ed:RegularPolygon.RenderTransform>
+            </ed:RegularPolygon>-->
+
+        </Grid>
+    </Border>
+
+
+
+</Window>

@@ -1,26 +1,24 @@
-﻿using FishNoty.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+﻿using System.Windows;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using Microsoft.Practices.Unity;
+using FishNoty.ViewModels;
+using System.Windows.Controls;
+using System;
+using FishNoty.Views;
+
 
 namespace FishNoty
 {
-    /// <summary>
-    /// Interaction logic for main.xaml
-    /// </summary>
-    public partial class main : Window
+    public partial class MainWindowStyled : Window
     {
-        public main()
+        //public MainWindowStyled([Dependency]MainWindowViewModel viewModel)
+        //{
+        //    InitializeComponent();
+        //    this.DataContext = viewModel;
+        //    this.Loaded += (s, e) => { (viewModel as IViewLoadedAware).CreateItems(); };
+        //}
+
+        public MainWindowStyled()
         {
             InitializeComponent();
 
@@ -31,6 +29,19 @@ namespace FishNoty
             m_notifyIcon.Icon = new System.Drawing.Icon("fish2.ico");
             m_notifyIcon.Click += new EventHandler(m_notifyIcon_Click);
         }
+
+
+        private void Grid_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.DragMove();
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+
 
         private System.Windows.Forms.NotifyIcon m_notifyIcon;
         private WindowState m_storedWindowState = WindowState.Normal;
@@ -50,7 +61,7 @@ namespace FishNoty
                     contentControl.Content = new statistics();
                     break;
                 case "Config":
-                    contentControl.Content = new config();
+                    contentControl.Content = new configView();
                     break;
                 case "homeView":
                     contentControl.Content = new homeView();
@@ -105,7 +116,5 @@ namespace FishNoty
         }
 
         #endregion
-
-
     }
 }
